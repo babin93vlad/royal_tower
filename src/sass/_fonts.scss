@@ -1,0 +1,28 @@
+@font-face {
+	font-family: "Playfair Display Regular  ";
+	src: local("PlayfairDisplay-Regular"),
+		url("../fonts/PlayfairDisplay-Regular.woff") format("woff"),
+		url("../fonts/PlayfairDisplay-Regular.ttf") format("truetype");
+}
+
+@font-face {
+	font-family: "Gotham Pro-Light";
+	src: local("GothamPro-Light"),
+		url("../fonts/GothamPro-Light.woff") format("woff"),
+		url("../fonts/GothamPro-Light.ttf") format("truetype");
+	font-weight: 300;
+}
+
+@font-face {
+	font-family: "Gotham Pro-Medium";
+	src: local("GothamPro-Medium"),
+		url("../fonts/GothamPro-Medium.woff") format("woff"),
+		url("../fonts/GothamPro-Medium.ttf") format("truetype");
+	font-weight: 500;
+}
+
+@font-face {
+	font-family: "BebasNeue-Bold";
+	src: local("BebasNeueBold"), url("../fonts/BebasNeueBold.woff") format("woff"),
+		url("../fonts/BebasNeueBold.ttf") format("truetype");
+}

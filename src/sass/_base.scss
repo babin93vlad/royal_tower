@@ -1,0 +1,53 @@
+//COLORS VARIABLES
+
+$color-white: #fff;
+$color-primary: #252525;
+$color-secondary: #333333;
+$color-black: #000;
+$color-black-light: #1b1b1b;
+
+$color-yellow-dark: #c09f48;
+
+$bp-largest: 90em; // 1440px
+$bp-smallest: 31.25em; // 500px
+
+*,
+*::after,
+*::before {
+	margin: 0;
+	padding: 0;
+	box-sizing: inherit;
+}
+
+html {
+	font-size: 62.5%;
+	box-sizing: border-box;
+
+	@media only screen and (max-width: $bp-smallest) {
+		font-size: 40%;
+	}
+}
+
+body {
+	font-family: "Gotham Pro-Light";
+	color: $color-white;
+	background-color: $color-primary;
+}
+
+.container {
+	display: grid;
+
+	grid-template-columns: 24rem repeat(4, max-content) 24rem;
+	grid-template-rows: repeat(5, max-content);
+
+	@media only screen and (max-width: $bp-largest) {
+		grid-template-columns: repeat(4, max-content);
+	}
+
+	@media only screen and (max-width: $bp-smallest) {
+		max-width: 100%;
+		width: 100%;
+
+		grid-template-columns: 2rem repeat(4, max-content) 2rem;
+	}
+}
