@@ -8,7 +8,10 @@ $color-black-light: #1b1b1b;
 
 $color-yellow-dark: #c09f48;
 
-$bp-largest: 90em; // 1440px
+$bp-largest: 75em; // 1200px
+$bp-large: 68.75em; // 1100px
+$bp-medium: 56.25em; // 900px
+$bp-small: 37.5em; // 600px
 $bp-smallest: 31.25em; // 500px
 
 *,
@@ -23,8 +26,8 @@ html {
 	font-size: 62.5%;
 	box-sizing: border-box;
 
-	@media only screen and (max-width: $bp-smallest) {
-		font-size: 40%;
+	@media only screen and (max-width: $bp-large) {
+		font-size: 50%;
 	}
 }
 
@@ -35,19 +38,11 @@ body {
 }
 
 .container {
-	display: grid;
-
-	grid-template-columns: 24rem repeat(4, max-content) 24rem;
-	grid-template-rows: repeat(5, max-content);
+	max-width: 144rem;
+	margin: 0 auto;
 
 	@media only screen and (max-width: $bp-largest) {
-		grid-template-columns: repeat(4, max-content);
-	}
-
-	@media only screen and (max-width: $bp-smallest) {
 		max-width: 100%;
 		width: 100%;
-
-		grid-template-columns: 2rem repeat(4, max-content) 2rem;
 	}
 }

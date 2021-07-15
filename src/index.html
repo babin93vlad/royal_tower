@@ -9,6 +9,38 @@
 	</head>
 	<body>
 		<div class="container">
+			<nav role="navigation" class="burger">
+				<div class="burger__wrapper">
+					<input type="checkbox" class="burger__input" />
+
+					<span class="burger__span"></span>
+					<span class="burger__span"></span>
+					<span class="burger__span"></span>
+
+					<ul class="burger__nav">
+						<li class="burger__item">
+							<a href="#" class="burger__link">Главная</a>
+						</li>
+
+						<li class="burger__item">
+							<a href="#" class="burger__link">О нас</a>
+						</li>
+
+						<li class="burger__item">
+							<a href="#" class="burger__link">Преимущества</a>
+						</li>
+
+						<li class="burger__item">
+							<a href="#" class="burger__link">Материалы</a>
+						</li>
+
+						<li class="burger__item">
+							<a href="#" class="burger__link">Контакты</a>
+						</li>
+					</ul>
+				</div>
+			</nav>
+
 			<header class="header">
 				<figure class="header__logo">
 					<img src="img/logo.png" alt="Logo" />
@@ -41,24 +73,28 @@
 					<option value="Romanian">RO</option>
 				</select>
 			</header>
+		</div>
 
-			<section class="subheader">
-				<video class="subheader__video" autoplay muted loop>
-					<source src="img/video.MP4" type="video/mp4" />
-				</video>
-			</section>
+		<section class="subheader">
+			<video class="subheader__video" autoplay muted loop>
+				<source src="img/video.MP4" type="video/mp4" />
+			</video>
+		</section>
 
+		<div class="container">
 			<main class="about">
-				<div class="about__title">
-					<p>О нас</p>
-					<h1>Бизнес-Центр</h1>
-				</div>
+				<div class="about__wrapper">
+					<div class="about__title">
+						<p>О нас</p>
+						<h1>Бизнес-Центр</h1>
+					</div>
 
-				<div class="about__descr">
-					Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ab explicabo
-					molestias officia iste veniam! Tenetur, doloremque inventore animi
-					perspiciatis dolore blanditiis explicabo vel, labore mollitia iste
-					dolor beatae, consectetur voluptatum.
+					<div class="about__descr">
+						Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ab
+						explicabo molestias officia iste veniam! Tenetur, doloremque
+						inventore animi perspiciatis dolore blanditiis explicabo vel, labore
+						mollitia iste dolor beatae, consectetur voluptatum.
+					</div>
 				</div>
 
 				<div class="about__counter">
@@ -94,11 +130,13 @@
 					</ul>
 				</div>
 			</main>
+		</div>
 
-			<section class="materials">
-				<h2>Материалы</h2>
+		<section class="materials">
+			<h2>Материалы</h2>
 
-				<div class="materials__wrapper">
+			<div class="materials__wrapper">
+				<div class="container">
 					<div class="materials__item">
 						<div class="materials__content">
 							<h3 class="materials__title">Лифты Schindler</h3>
@@ -109,108 +147,119 @@
 								вентиляции
 							</p>
 						</div>
-					</div>
-
-					<div class="materials__pictures">
-						<img src="img/image.png" alt="" />
+						<div class="materials__pictures">
+							<img src="img/image.png" alt="img" />
+						</div>
 					</div>
 
 					<div class="materials__item">
 						<div class="materials__content">
 							<h3 class="materials__title">Лифты Schindler</h3>
 							<p class="materials__descr">
-								Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-								Molestias sed odio nesciunt nisi mollitia ipsum eveniet,
-								architecto aliquam maiores?
+								Лифты премиум-класса со скоростью <br />
+								2.5 м/с, безопасный кабины со <br />
+								встроенной системой <br />
+								вентиляции
 							</p>
 						</div>
-					</div>
-
-					<div class="materials__pictures">
-						<img src="img/image1.png" alt="" />
+						<div class="materials__pictures">
+							<img src="img/image1.png" alt="img" />
+						</div>
 					</div>
 
 					<div class="materials__item">
 						<div class="materials__content">
 							<h3 class="materials__title">Лифты Schindler</h3>
 							<p class="materials__descr">
-								Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-								Molestias sed odio nesciunt nisi mollitia ipsum eveniet,
-								architecto aliquam maiores?
+								Лифты премиум-класса со скоростью <br />
+								2.5 м/с, безопасный кабины со <br />
+								встроенной системой <br />
+								вентиляции
 							</p>
+						</div>
+						<div class="materials__pictures">
+							<img src="img/image2.png" alt="img" />
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<footer class="footer">
+			<div class="container">
+				<div class="footer__about-wrapper">
+					<div class="footer__about">
+						<h3 class="footer__title">Наши контакты</h3>
+						<p class="footer__descr">
+							Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nesciunt
+							dolore quia quod ab iusto facere quis. Nisi nulla beatae quasi
+							odit officia amet esse et corrupti voluptas, velit, omnis
+							incidunt!
+						</p>
+					</div>
+
+					<div class="footer__logo">
+						<img src="img/logo.png" alt="logo" />
+					</div>
+				</div>
+
+				<div class="footer__social-wrapper">
+					<div class="footer__social">
+						<div class="footer__location footer__item">
+							<svg class="footer__icon">
+								<use xlink:href="img/sprite.svg#icon-location"></use>
+							</svg>
+							<span>Moldova Chisinau</span>
+						</div>
+						<div class="footer__mail footer__item">
+							<svg class="footer__icon">
+								<use xlink:href="img/sprite.svg#icon-mail4"></use>
+							</svg>
+							<span>contact@royaltower.com</span>
+						</div>
+						<div class="footer__phone footer__item">
+							<svg class="footer__icon">
+								<use xlink:href="img/sprite.svg#icon-phone"></use>
+							</svg>
+							<span>+373 (22) 50 50 50</span>
 						</div>
 					</div>
 
-					<div class="materials__pictures">
-						<img src="img/image2.png" alt="" />
-					</div>
-
-					<div class="materials__item">&nbsp;</div>
-				</div>
-			</section>
-
-			<footer class="footer">
-				<div class="footer__about">
-					<h3 class="footer__title">Наши контакты</h3>
-					<p class="footer__descr">
-						Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nesciunt
-						dolore quia quod ab iusto facere quis. Nisi nulla beatae quasi odit
-						officia amet esse et corrupti voluptas, velit, omnis incidunt!
-					</p>
-				</div>
-
-				<div class="footer__logo">
-					<img src="img/logo.png" alt="logo" />
-				</div>
-
-				<div class="footer__social">
-					<div class="footer__location footer__item">
-						<svg class="footer__icon">
-							<use xlink:href="img/sprite.svg#icon-location"></use>
-						</svg>
-						<span>Moldova Chisinau</span>
-					</div>
-					<div class="footer__mail footer__item">
-						<svg class="footer__icon">
-							<use xlink:href="img/sprite.svg#icon-mail4"></use>
-						</svg>
-						<span>contact@royaltower.com</span>
-					</div>
-					<div class="footer__phone footer__item">
-						<svg class="footer__icon">
-							<use xlink:href="img/sprite.svg#icon-phone"></use>
-						</svg>
-						<span>+373 (22) 50 50 50</span>
-					</div>
-				</div>
-
-				<div class="footer__instagram">
-					<h4>instagram @royaltower_rt</h4>
-					<div class="footer__inst-wrapper">
-						<figure>
+					<div class="footer__instagram">
+						<h4>
+							instagram
 							<a
-								href="https://instagram.com/royaltower_rt?utm_medium=copy_link
-							"
+								href="https://instagram.com/royaltower_rt?utm_medium=copy_link"
 								target="_blank"
-								><img src="img/instagram 1.png" alt="img"
-							/></a>
-						</figure>
-						<figure>
-							<a
-								href="https://instagram.com/royaltower_rt?utm_medium=copy_link
-							"
-								target="_blank"
-								><img src="img/instagram 2.png" alt="img"
-							/></a>
-						</figure>
-						<figure>
-							<a
-								href="https://instagram.com/royaltower_rt?utm_medium=copy_link
-							"
-								target="_blank"
-								><img src="img/instagram 3.png" alt="img"
-							/></a>
-						</figure>
+								>@royaltower_rt</a
+							>
+						</h4>
+						<div class="footer__inst-wrapper">
+							<figure>
+								<a
+									href="https://instagram.com/royaltower_rt?utm_medium=copy_link
+									"
+									target="_blank"
+									><img src="img/instagram 1.png" alt="img"
+								/></a>
+							</figure>
+							<figure>
+								<a
+									href="https://instagram.com/royaltower_rt?utm_medium=copy_link
+									"
+									target="_blank"
+									><img src="img/instagram 2.png" alt="img"
+								/></a>
+							</figure>
+							<figure>
+								<a
+									href="https://instagram.com/royaltower_rt?utm_medium=copy_link
+									"
+									target="_blank"
+									><img src="img/instagram 3.png" alt="img"
+								/></a>
+							</figure>
+						</div>
 					</div>
 				</div>
 
@@ -231,7 +280,7 @@
 						<a href="#" class="footer__link">Контакты</a>
 					</li>
 				</ul>
-			</footer>
-		</div>
+			</div>
+		</footer>
 	</body>
 </html>
