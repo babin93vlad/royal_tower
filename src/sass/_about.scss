@@ -26,8 +26,13 @@
 		}
 	}
 
+	&__title._active {
+		animation: moveToBottom 0.5s;
+		animation-fill-mode: forwards;
+	}
 	&__title {
 		text-transform: uppercase;
+		opacity: 0;
 
 		@media only screen and (max-width: $bp-medium) {
 			margin-bottom: 3rem;
@@ -50,17 +55,37 @@
 		}
 	}
 
+	&__line._active {
+		animation: moveToBottom 0.5s;
+		animation-delay: 0.6s;
+		animation-fill-mode: forwards;
+	}
+	&__line {
+		opacity: 0;
+		width: 3px;
+		height: 13rem;
+		background-color: #474747;
+
+		@media only screen and (max-width: $bp-medium) {
+			width: 13rem;
+			height: 3px;
+		}
+	}
+
+	&__descr._active {
+		animation: moveToBottom 0.5s;
+		animation-delay: 1.2s;
+		animation-fill-mode: forwards;
+	}
 	&__descr {
+		opacity: 0;
 		width: 57rem;
 		color: #adadad;
-		padding: 0 4rem;
-		border-left: 3px solid #474747;
 
 		@media only screen and (max-width: $bp-medium) {
 			padding: 3rem 0;
 			text-align: center;
 			border: none;
-			border-top: 3px solid #474747;
 		}
 	}
 
@@ -81,9 +106,30 @@
 	}
 
 	&__item {
+		opacity: 0;
 		width: 17rem;
 		height: 13rem;
 		text-align: center;
+
+		&:first-child._active {
+			animation: moveToRight 0.6s;
+			animation-fill-mode: forwards;
+		}
+		&:nth-child(2)._active {
+			animation: moveToRight 0.6s;
+			animation-delay: 0.7s;
+			animation-fill-mode: forwards;
+		}
+		&:nth-child(3)._active {
+			animation: moveToRight 0.6s;
+			animation-delay: 1.4s;
+			animation-fill-mode: forwards;
+		}
+		&:last-child._active {
+			animation: moveToRight 0.6s;
+			animation-delay: 2s;
+			animation-fill-mode: forwards;
+		}
 
 		@media only screen and (max-width: $bp-medium) {
 			flex-basis: 50%;

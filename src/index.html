@@ -64,13 +64,18 @@
 					</li>
 
 					<li class="header__item">
-						<a href="#" class="header__link">Контакты</a>
+						<a href="#" class="header__link ru-text">Контакты</a>
+						<a href="#" class="header__link ro-text">Contacte</a>
 					</li>
 				</ul>
 
 				<select class="header__language">
-					<option selected value="Русский">RU</option>
-					<option value="Romanian">RO</option>
+					<option selected value="Русский" class="header__language ru" id="ru">
+						RU
+					</option>
+					<option value="Romanian" class="header__language ro" id="ro">
+						RO
+					</option>
 				</select>
 			</header>
 		</div>
@@ -84,12 +89,12 @@
 		<div class="container">
 			<main class="about">
 				<div class="about__wrapper">
-					<div class="about__title">
+					<div class="about__title _anim-items">
 						<p>О нас</p>
 						<h1>Бизнес-Центр</h1>
 					</div>
-
-					<div class="about__descr">
+					<div class="about__line _anim-items"></div>
+					<div class="about__descr _anim-items">
 						Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ab
 						explicabo molestias officia iste veniam! Tenetur, doloremque
 						inventore animi perspiciatis dolore blanditiis explicabo vel, labore
@@ -99,28 +104,28 @@
 
 				<div class="about__counter">
 					<ul class="about__list">
-						<li class="about__item">
+						<li class="about__item _anim-items">
 							<figure>
 								<img src="img/branch.png" alt="" />
 								<figcaption>25</figcaption>
 							</figure>
 							<p>этажей</p>
 						</li>
-						<li class="about__item">
+						<li class="about__item _anim-items">
 							<figure>
 								<img src="img/branch.png" alt="" />
 								<figcaption>60</figcaption>
 							</figure>
 							<p>номеров</p>
 						</li>
-						<li class="about__item">
+						<li class="about__item _anim-items">
 							<figure>
 								<img src="img/branch.png" alt="" />
 								<figcaption>85</figcaption>
 							</figure>
 							<p>офисов</p>
 						</li>
-						<li class="about__item">
+						<li class="about__item _anim-items">
 							<figure>
 								<img src="img/branch.png" alt="" />
 								<figcaption>70</figcaption>
@@ -133,12 +138,12 @@
 		</div>
 
 		<section class="materials">
-			<h2>Материалы</h2>
+			<h2 class="_anim-items">Материалы</h2>
 
 			<div class="materials__wrapper">
 				<div class="container">
 					<div class="materials__item">
-						<div class="materials__content">
+						<div class="materials__content _anim-items">
 							<h3 class="materials__title">Лифты Schindler</h3>
 							<p class="materials__descr">
 								Лифты премиум-класса со скоростью <br />
@@ -153,7 +158,7 @@
 					</div>
 
 					<div class="materials__item">
-						<div class="materials__content">
+						<div class="materials__content _anim-items">
 							<h3 class="materials__title">Лифты Schindler</h3>
 							<p class="materials__descr">
 								Лифты премиум-класса со скоростью <br />
@@ -168,7 +173,7 @@
 					</div>
 
 					<div class="materials__item">
-						<div class="materials__content">
+						<div class="materials__content _anim-items">
 							<h3 class="materials__title">Лифты Schindler</h3>
 							<p class="materials__descr">
 								Лифты премиум-класса со скоростью <br />
@@ -189,8 +194,8 @@
 			<div class="container">
 				<div class="footer__about-wrapper">
 					<div class="footer__about">
-						<h3 class="footer__title">Наши контакты</h3>
-						<p class="footer__descr">
+						<h3 class="footer__title _anim-items">Наши контакты</h3>
+						<p class="footer__descr _anim-items">
 							Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nesciunt
 							dolore quia quod ab iusto facere quis. Nisi nulla beatae quasi
 							odit officia amet esse et corrupti voluptas, velit, omnis
@@ -198,7 +203,7 @@
 						</p>
 					</div>
 
-					<div class="footer__logo">
+					<div class="footer__logo _anim-items">
 						<img src="img/logo.png" alt="logo" />
 					</div>
 				</div>
@@ -206,27 +211,27 @@
 				<div class="footer__social-wrapper">
 					<div class="footer__social">
 						<div class="footer__location footer__item">
-							<svg class="footer__icon">
+							<svg class="footer__icon footer__icon-location _anim-items">
 								<use xlink:href="img/sprite.svg#icon-location"></use>
 							</svg>
-							<span>Moldova Chisinau</span>
+							<span class="footer__location-span _anim-items">Moldova Chisinau</span>
 						</div>
 						<div class="footer__mail footer__item">
-							<svg class="footer__icon">
+							<svg class="footer__icon footer__icon-mail _anim-items">
 								<use xlink:href="img/sprite.svg#icon-mail4"></use>
 							</svg>
-							<span>contact@royaltower.com</span>
+							<span class="footer__mail-span _anim-items">contact@royaltower.com</span>
 						</div>
 						<div class="footer__phone footer__item">
-							<svg class="footer__icon">
+							<svg class="footer__icon footer__icon-phone _anim-items">
 								<use xlink:href="img/sprite.svg#icon-phone"></use>
 							</svg>
-							<span>+373 (22) 50 50 50</span>
+							<span class="footer__phone-span _anim-items">+373 (22) 50 50 50</spanclass=>
 						</div>
 					</div>
 
 					<div class="footer__instagram">
-						<h4>
+						<h4 class="_anim-items">
 							instagram
 							<a
 								href="https://instagram.com/royaltower_rt?utm_medium=copy_link"
@@ -235,7 +240,7 @@
 							>
 						</h4>
 						<div class="footer__inst-wrapper">
-							<figure>
+							<figure class="_anim-items">
 								<a
 									href="https://instagram.com/royaltower_rt?utm_medium=copy_link
 									"
@@ -243,7 +248,7 @@
 									><img src="img/instagram 1.png" alt="img"
 								/></a>
 							</figure>
-							<figure>
+							<figure class="_anim-items">
 								<a
 									href="https://instagram.com/royaltower_rt?utm_medium=copy_link
 									"
@@ -251,7 +256,7 @@
 									><img src="img/instagram 2.png" alt="img"
 								/></a>
 							</figure>
-							<figure>
+							<figure class="_anim-items">
 								<a
 									href="https://instagram.com/royaltower_rt?utm_medium=copy_link
 									"
@@ -282,5 +287,8 @@
 				</ul>
 			</div>
 		</footer>
+
+		<script src="js/jquery.min.js"></script>
+		<script src="js/script.js"></script>
 	</body>
 </html>

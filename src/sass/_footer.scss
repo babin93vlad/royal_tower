@@ -33,20 +33,40 @@
 	}
 
 	&__title {
+		opacity: 0;
 		font-family: "PlayfairDisplay-Regular";
 		font-size: 6rem;
 		padding-bottom: 5rem;
+
+		&._active {
+			animation: moveToRight 0.4s;
+			animation-fill-mode: forwards;
+		}
 	}
 
 	&__descr {
+		opacity: 0;
 		color: $color-white;
 		opacity: 0.5;
 		font-size: 1.6rem;
 		width: 50rem;
+
+		&._active {
+			animation: moveToRight 0.4s;
+			animation-delay: 0.5s;
+			animation-fill-mode: forwards;
+		}
 	}
 
 	&__logo {
+		opacity: 0;
 		margin-right: 17rem;
+
+		&._active {
+			animation: moveToRight 0.4s;
+			animation-delay: 3s;
+			animation-fill-mode: forwards;
+		}
 
 		@media only screen and (max-width: $bp-medium) {
 			margin: 0;
@@ -104,13 +124,80 @@
 		}
 	}
 
+	&__icon-location {
+		opacity: 0;
+
+		&._active {
+			animation: moveToRight 0.3s;
+			animation-delay: 0.8s;
+			animation-fill-mode: forwards;
+		}
+	}
+
+	&__icon-mail {
+		opacity: 0;
+
+		&._active {
+			animation: moveToRight 0.3s;
+			animation-delay: 1.5s;
+			animation-fill-mode: forwards;
+		}
+	}
+
+	&__icon-phone {
+		opacity: 0;
+
+		&._active {
+			animation: moveToRight 0.3s;
+			animation-delay: 2.1s;
+			animation-fill-mode: forwards;
+		}
+	}
+
+	&__location-span {
+		opacity: 0;
+
+		&._active {
+			animation: moveToRight 0.3s;
+			animation-delay: 1.2s;
+			animation-fill-mode: forwards;
+		}
+	}
+
+	&__mail-span {
+		opacity: 0;
+
+		&._active {
+			animation: moveToRight 0.3s;
+			animation-delay: 1.8s;
+			animation-fill-mode: forwards;
+		}
+	}
+
+	&__phone-span {
+		opacity: 0;
+
+		&._active {
+			animation: moveToRight 0.3s;
+			animation-delay: 2.5s;
+			animation-fill-mode: forwards;
+		}
+	}
+
 	&__instagram {
 		h4 {
+			opacity: 0;
 			font-size: 2.4rem;
 			color: $color-white;
 			text-transform: uppercase;
 			font-family: "PlayfairDisplay-Regular", sans-serif;
 			margin-bottom: 2rem;
+
+			&._active {
+				animation: moveToRight 0.3s;
+				animation-delay: 3.4s;
+				animation-fill-mode: forwards;
+			}
 
 			a {
 				&:link,
@@ -139,8 +226,28 @@
 		}
 
 		figure {
+			opacity: 0;
 			cursor: pointer;
 			margin-right: 2rem;
+
+			&:first-child._active {
+				animation: moveToRight 0.3s;
+				animation-delay: 3.7s;
+				animation-fill-mode: forwards;
+			}
+
+			&:nth-child(2)._active {
+				animation: moveToRight 0.3s;
+				animation-delay: 4s;
+				animation-fill-mode: forwards;
+			}
+
+			&:last-child._active {
+				animation: moveToRight 0.3s;
+				animation-delay: 4.3s;
+				animation-fill-mode: forwards;
+			}
+
 			@media only screen and (max-width: $bp-medium) {
 				margin-right: 1rem;
 			}
