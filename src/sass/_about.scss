@@ -9,6 +9,10 @@
 		margin-bottom: 10rem;
 	}
 
+	@media only screen and (max-width: $bp-smallest) {
+		margin-bottom: 5rem;
+	}
+
 	&__wrapper {
 		display: flex;
 		justify-content: space-around;
@@ -52,6 +56,10 @@
 			padding: 0;
 			font-family: "PlayfairDisplay-Regular";
 			font-size: 6rem;
+
+			@media only screen and (max-width: $bp-smallest) {
+				font-size: 3rem;
+			}
 		}
 	}
 
@@ -85,7 +93,11 @@
 		@media only screen and (max-width: $bp-medium) {
 			padding: 3rem 0;
 			text-align: center;
-			border: none;
+		}
+
+		@media only screen and (max-width: $bp-small) {
+			padding: 2rem 0;
+			width: 30rem;
 		}
 	}
 

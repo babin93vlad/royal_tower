@@ -16,6 +16,11 @@
 			margin-bottom: 5rem;
 		}
 
+		@media only screen and (max-width: $bp-medium) {
+			margin-bottom: 3rem;
+			font-size: 3rem;
+		}
+
 		&._active {
 			animation: moveToBottom 0.9s;
 			animation-fill-mode: forwards;
@@ -68,19 +73,19 @@
 		}
 
 		@media only screen and (max-width: $bp-large) {
-			height: 30vh;
+			height: 15vh;
 		}
 
 		@media only screen and (max-width: $bp-medium) {
 			width: 60%;
-			height: 25vh;
+			height: 15vh;
 			transform: translate(50%, 0);
 			padding-right: 3rem;
 		}
 
 		@media only screen and (max-width: $bp-small) {
-			width: 40vw;
-			height: 20vh;
+			width: 23rem;
+			height: 10rem;
 			transform: translate(30%, 0);
 			padding-right: 1rem;
 		}

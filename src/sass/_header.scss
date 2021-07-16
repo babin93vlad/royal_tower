@@ -8,10 +8,21 @@
 	&__logo {
 		@media only screen and (max-width: $bp-medium) {
 			margin: 0 auto;
+			transform: translateX(5rem);
 		}
+
+		@media only screen and (max-width: $bp-small) {
+			transform: translateX(6rem);
+		}
+
 		img {
 			object-fit: cover;
 			display: block;
+
+			@media only screen and (max-width: $bp-small) {
+				width: 60%;
+				height: 60%;
+			}
 		}
 	}
 
