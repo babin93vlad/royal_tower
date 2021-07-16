@@ -1,6 +1,5 @@
 window.addEventListener("DOMContentLoaded", () => {
-	const ruLangButton = document.querySelector(".header__language.ru");
-	const roLangButton = document.querySelector(".header__language.ro");
+	const langSelect = $(".lang-selector");
 	const animItems = document.querySelectorAll("._anim-items");
 
 	const observer = new IntersectionObserver((entries) => {
@@ -15,35 +14,46 @@ window.addEventListener("DOMContentLoaded", () => {
 		observer.observe(animItem);
 	});
 
-	ruLangButton.addEventListener("click", () => {
-		localStorage.setItem("language", "RU");
-		$(".ru-text").fadeIn();
-		$(".ro-text").hide();
-	});
-
-	roLangButton.addEventListener("click", () => {
-		localStorage.setItem("language", "RO");
-		$(".ro-text").fadeIn();
-		$(".ru-text").hide();
+	langSelect.change(function() {
+		if (langSelect.val() === "ru") {
+			localStorage.setItem("language", "RU");
+			$(".ru-text").fadeIn();
+			$(".ro-text").hide();
+			$(".en-text").hide();
+		} else if (langSelect.val() === "ro") {
+			localStorage.setItem("language", "RO");
+			$(".ro-text").fadeIn();
+			$(".ru-text").hide();
+			$(".en-text").hide();
+		} else if (langSelect.val() === "en") {
+			localStorage.setItem("language", "EN");
+			$(".en-text").fadeIn();
+			$(".ru-text").hide();
+			$(".ro-text").hide();
+		}
 	});
 });
 
 $(document).ready(function () {
-	const ruLangButton = $("#ru");
-	const roLangButton = $("#ro");
+	const langSelect = $(".lang-selector");
 
 	if (
 		localStorage.getItem("language") === "RU" ||
 		localStorage.getItem("language") == null
 	) {
-		ruLangButton.prop("checked", true);
-		roLangButton.prop("checked", false);
+		langSelect.val("ru");
 		$(".ru-text").fadeIn();
 		$(".ro-text").hide();
-	} else {
-		roLangButton.prop("checked", true);
-		ruLangButton.prop("checked", false);
+		$(".en-text").hide();
+	} else if (localStorage.getItem("language") === "RO") {
+		langSelect.val("ro");
 		$(".ro-text").fadeIn();
+		$(".ru-text").hide();
+		$(".en-text").hide();
+	} else if (localStorage.getItem("language") === "EN") {
+		langSelect.val("en");
+		$(".en-text").fadeIn();
+		$(".ro-text").hide();
 		$(".ru-text").hide();
 	}
 });
