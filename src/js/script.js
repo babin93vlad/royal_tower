@@ -14,7 +14,7 @@ window.addEventListener("DOMContentLoaded", () => {
 		observer.observe(animItem);
 	});
 
-	langSelect.change(function() {
+	langSelect.change(function () {
 		if (langSelect.val() === "ru") {
 			localStorage.setItem("language", "RU");
 			$(".ru-text").fadeIn();
@@ -35,7 +35,39 @@ window.addEventListener("DOMContentLoaded", () => {
 });
 
 $(document).ready(function () {
+	$(".owl-carousel").owlCarousel({
+		loop: true,
+		items: 3,
+		margin: 20,
+		nav: false,
+		responsive: {
+			0: {
+				items: 1,
+			},
+			600: {
+				items: 3,
+			},
+			1000: {
+				items: 3,
+			},
+		},
+	});
+});
+
+$(document).ready(function () {
 	const langSelect = $(".lang-selector");
+
+	$(".header__burger").click(function () {
+		$(".header__burger").toggleClass("active");
+		$(".header__menu").toggleClass("active");
+		$(".header__footer").toggleClass("active");
+		$(".header__social").toggleClass("active");
+		$("body").toggleClass("lock");
+	});
+
+	$(".header__link").click(function () {
+		$(".header__link").toggleClass("active");
+	});
 
 	if (
 		localStorage.getItem("language") === "RU" ||

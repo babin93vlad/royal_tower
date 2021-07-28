@@ -1,12 +1,24 @@
 .subheader {
+	padding-top: 12rem;
 	margin-bottom: 14rem;
 
 	@media only screen and (max-width: $bp-medium) {
 		margin-bottom: 10rem;
 	}
 
+	@media only screen and (max-width: $bp-small) {
+		padding-top: 10rem;
+		margin-bottom: 6rem;
+	}
+
 	@media only screen and (max-width: $bp-smallest) {
 		margin-bottom: 4rem;
+	}
+
+	&__img {
+		width: 100%;
+		height: 90vh;
+		object-fit: cover;
 	}
 
 	&__video {

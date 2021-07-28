@@ -2,7 +2,6 @@
 	display: flex;
 	flex-direction: column;
 	margin-bottom: 20rem;
-
 	font-size: 2.2rem;
 
 	@media only screen and (max-width: $bp-medium) {
@@ -15,7 +14,8 @@
 
 	&__wrapper {
 		display: flex;
-		justify-content: space-around;
+		width: 100%;
+		justify-content: space-between;
 		align-items: center;
 		margin-bottom: 17rem;
 
@@ -25,13 +25,16 @@
 		}
 
 		@media only screen and (max-width: $bp-small) {
-			flex-direction: column;
 			margin-bottom: 5rem;
+		}
+
+		@media only screen and (max-width: $bp-tiny) {
+			margin-bottom: 3rem;
 		}
 	}
 
 	&__title._active {
-		animation: moveToBottom 0.5s;
+		animation: moveToBottom 0.4s;
 		animation-fill-mode: forwards;
 	}
 	&__title {
@@ -64,10 +67,11 @@
 	}
 
 	&__line._active {
-		animation: moveToBottom 0.5s;
-		animation-delay: 0.6s;
+		animation: moveToBottom 0.4s;
+		animation-delay: 0.4s;
 		animation-fill-mode: forwards;
 	}
+
 	&__line {
 		opacity: 0;
 		width: 3px;
@@ -81,10 +85,11 @@
 	}
 
 	&__descr._active {
-		animation: moveToBottom 0.5s;
-		animation-delay: 1.2s;
+		animation: moveToBottom 0.4s;
+		animation-delay: 0.8s;
 		animation-fill-mode: forwards;
 	}
+
 	&__descr {
 		opacity: 0;
 		width: 57rem;
@@ -125,22 +130,22 @@
 		text-align: center;
 
 		&:first-child._active {
-			animation: moveToRight 0.6s;
+			animation: moveToRight 0.4s;
 			animation-fill-mode: forwards;
 		}
 		&:nth-child(2)._active {
-			animation: moveToRight 0.6s;
-			animation-delay: 0.7s;
+			animation: moveToRight 0.4s;
+			animation-delay: 0.5s;
 			animation-fill-mode: forwards;
 		}
 		&:nth-child(3)._active {
-			animation: moveToRight 0.6s;
-			animation-delay: 1.4s;
+			animation: moveToRight 0.4s;
+			animation-delay: 0.9s;
 			animation-fill-mode: forwards;
 		}
 		&:last-child._active {
-			animation: moveToRight 0.6s;
-			animation-delay: 2s;
+			animation: moveToRight 0.4s;
+			animation-delay: 1.3s;
 			animation-fill-mode: forwards;
 		}
 
@@ -166,9 +171,18 @@
 			}
 
 			img {
-				@media only screen and (max-width: $bp-smallest) {
+				@media only screen and (max-width: $bp-small) {
 					width: 9rem;
 					height: 9rem;
+				}
+				@media only screen and (max-width: $bp-smallest) {
+					width: 7rem;
+					height: 7rem;
+				}
+
+				@media only screen and (max-width: $bp-tiny) {
+					width: 6rem;
+					height: 6rem;
 				}
 			}
 		}
@@ -179,27 +193,38 @@
 			top: 50%;
 			left: 50%;
 			transform: translate(-50%, -50%);
-
 			font-size: 8rem;
 			color: white;
 
-			@media only screen and (max-width: $bp-small) {
+			@media only screen and (max-width: $bp-medium) {
 				display: flex;
 				align-items: center;
 				justify-content: center;
-				font-size: 6rem;
-				top: 50%;
-				left: 50%;
-				transform: translate(-50%, -50%);
 			}
 
 			@media only screen and (max-width: $bp-small) {
 				font-size: 5rem;
 			}
+
+			@media only screen and (max-width: $bp-smallest) {
+				font-size: 3.5rem;
+			}
+
+			@media only screen and (max-width: $bp-tiny) {
+				font-size: 3rem;
+			}
 		}
 
 		p {
 			padding: 2rem 0;
+
+			@media only screen and (max-width: $bp-small) {
+				font-size: 2rem;
+			}
+
+			@media only screen and (max-width: $bp-tiny) {
+				font-size: 1.5rem;
+			}
 		}
 	}
 }

@@ -13,6 +13,7 @@ $bp-large: 68.75em; // 1100px
 $bp-medium: 56.25em; // 900px
 $bp-small: 37.5em; // 600px
 $bp-smallest: 31.25em; // 500px
+$bp-tiny: 25em; // 400px
 
 *,
 *::after,
@@ -35,6 +36,15 @@ body {
 	font-family: "Gotham Pro-Light";
 	color: $color-white;
 	background-color: $color-primary;
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+
+	@media only screen and (max-width: $bp-medium) {
+		&.lock {
+			overflow: hidden;
+		}
+	}
 }
 
 .container {
@@ -44,5 +54,24 @@ body {
 	@media only screen and (max-width: $bp-largest) {
 		max-width: 100%;
 		width: 100%;
+	}
+}
+
+.title {
+	font-family: "PlayfairDisplay-Regular";
+	font-size: 6rem;
+	color: $color-white;
+	text-align: center;
+
+	@media only screen and (max-width: $bp-medium) {
+		font-size: 5rem;
+	}
+
+	@media only screen and (max-width: $bp-small) {
+		font-size: 4rem;
+	}
+
+	@media only screen and (max-width: $bp-smallest) {
+		font-size: 3rem;
 	}
 }

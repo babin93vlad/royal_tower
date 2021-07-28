@@ -1,27 +1,141 @@
 .header {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 50;
 
-	height: 12rem;
+	&:before {
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-color: $color-primary;
 
-	&__logo {
 		@media only screen and (max-width: $bp-medium) {
-			margin: 0 auto;
-			transform: translateX(5rem);
+			z-index: 100;
+		}
+	}
+
+	&__wrapper-item {
+		width: 5rem;
+		z-index: 500;
+	}
+
+	&__body {
+		position: relative;
+		width: 100%;
+		display: flex;
+		justify-content: space-around;
+		align-items: center;
+		height: 12rem;
+
+		@media only screen and (max-width: $bp-medium) {
+			z-index: 200;
 		}
 
 		@media only screen and (max-width: $bp-small) {
-			transform: translateX(6rem);
+			height: 10rem;
 		}
+	}
+
+	&__burger {
+		display: none;
+		z-index: 5000;
+
+		@media only screen and (max-width: $bp-medium) {
+			display: block;
+			position: relative;
+			width: 3rem;
+			height: 2rem;
+
+			span {
+				position: absolute;
+				background-color: $color-white;
+				width: 100%;
+				height: 0.2rem;
+				top: 0.9rem;
+				transition: all 0.4s;
+			}
+
+			&.active::before {
+				transform: rotate(45deg);
+				top: 0.9rem;
+			}
+
+			&.active::after {
+				transform: rotate(-45deg);
+				bottom: 0.9rem;
+			}
+
+			&.active span {
+				transform: scale(0);
+			}
+
+			&::before,
+			&::after {
+				content: "";
+				background-color: $color-white;
+				width: 100%;
+				position: absolute;
+				height: 0.2rem;
+				transition: all 0.4s;
+			}
+
+			&::before {
+				top: 0;
+			}
+
+			&::after {
+				bottom: 0;
+			}
+		}
+	}
+
+	&__logo {
+		z-index: 200;
+		display: flex;
+		align-items: center;
+		justify-content: center;
 
 		img {
+			max-width: 100%;
 			object-fit: cover;
 			display: block;
 
-			@media only screen and (max-width: $bp-small) {
-				width: 60%;
-				height: 60%;
+			@media only screen and (max-width: $bp-medium) {
+			}
+		}
+	}
+
+	&__menu {
+		display: block;
+		opacity: 0;
+		padding: 0;
+		margin: 0;
+
+		&._active {
+			animation: moveToBottom 0.3s;
+			animation-fill-mode: forwards;
+		}
+
+		@media only screen and (max-width: $bp-medium) {
+			display: flex;
+			align-items: center;
+			z-index: 100;
+			position: fixed;
+			top: 0;
+			left: -100%;
+			width: 100%;
+			height: 100%;
+			background-color: $color-primary;
+			transition: all 0.4s;
+			background: linear-gradient(to bottom, $color-primary 70%, black 70%);
+
+			&.active {
+				left: 0;
 			}
 		}
 	}
@@ -31,9 +145,74 @@
 		justify-content: space-between;
 		align-items: center;
 		list-style: none;
+		padding: 0;
+		margin: 0;
 
 		@media only screen and (max-width: $bp-medium) {
-			display: none;
+			width: 100%;
+			height: 50vh;
+			flex-direction: column;
+			justify-content: start;
+			transform: translateX(-1.5rem);
+		}
+
+		@media only screen and (max-width: $bp-small) {
+			transform: translateX(0);
+		}
+	}
+
+	&__footer {
+		left: -100%;
+		display: none;
+		transition: all 0.4s;
+
+		@media only screen and (max-width: $bp-medium) {
+			&.active {
+				width: 100%;
+				height: 20vh;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				position: fixed;
+				top: 70%;
+				left: 0;
+				z-index: 300;
+			}
+		}
+	}
+
+	&__social {
+		display: none;
+
+		&.active {
+			display: flex;
+			justify-content: space-around;
+			width: 50%;
+		}
+	}
+
+	&__icon {
+		width: 2rem;
+		height: 2rem;
+		opacity: 1;
+		fill: $color-yellow-dark;
+		transition: all 0.3s;
+
+		&:hover {
+			fill: $color-white;
+		}
+
+		&._active {
+			animation: moveToRight 0.6s;
+			animation-delay: 0.4s;
+			animation-fill-mode: backwards;
+		}
+	}
+
+	&__item {
+		&.active > a {
+			color: $color-yellow-dark;
+			opacity: 1;
 		}
 	}
 
@@ -42,15 +221,11 @@
 
 		@media only screen and (max-width: $bp-largest) {
 			padding-right: 3rem;
-			flex: 1;
 		}
 
 		@media only screen and (max-width: $bp-medium) {
-			padding-right: 2rem;
-		}
-
-		@media only screen and (max-width: $bp-medium) {
-			padding-right: 1rem;
+			padding: 0;
+			padding-bottom: 3rem;
 		}
 	}
 
@@ -82,6 +257,7 @@
 		font-size: 1.8rem;
 		cursor: pointer;
 		outline: none;
+		z-index: 200;
 
 		&:hover,
 		&:focus {
