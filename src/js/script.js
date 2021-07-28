@@ -65,10 +65,6 @@ $(document).ready(function () {
 		$("body").toggleClass("lock");
 	});
 
-	$(".header__link").click(function () {
-		$(".header__link").toggleClass("active");
-	});
-
 	if (
 		localStorage.getItem("language") === "RU" ||
 		localStorage.getItem("language") == null

@@ -19,11 +19,6 @@
 		}
 	}
 
-	&__wrapper-item {
-		width: 5rem;
-		z-index: 500;
-	}
-
 	&__body {
 		position: relative;
 		width: 100%;
@@ -38,6 +33,22 @@
 
 		@media only screen and (max-width: $bp-small) {
 			height: 10rem;
+		}
+	}
+
+	&__wrapper-item {
+		width: 7rem;
+		z-index: 500;
+		&:first-child {
+			display: none;
+
+			@media only screen and (max-width: $bp-medium) {
+				display: block;
+			}
+		}
+
+		@media only screen and (max-width: $bp-small) {
+			width: 5rem;
 		}
 	}
 
@@ -96,17 +107,11 @@
 
 	&__logo {
 		z-index: 200;
-		display: flex;
-		align-items: center;
-		justify-content: center;
 
 		img {
 			max-width: 100%;
 			object-fit: cover;
 			display: block;
-
-			@media only screen and (max-width: $bp-medium) {
-			}
 		}
 	}
 
