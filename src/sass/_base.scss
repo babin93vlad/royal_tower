@@ -33,7 +33,7 @@ html {
 }
 
 body {
-	font-family: "Gotham Pro-Light";
+	font-family: "Ubuntu Regular";
 	color: $color-white;
 	background-color: $color-primary;
 	min-height: 100vh;
@@ -73,5 +73,17 @@ body {
 
 	@media only screen and (max-width: $bp-smallest) {
 		font-size: 3rem;
+	}
+
+	&__about {
+		text-align: left;
+
+		@media only screen and (max-width: $bp-medium) {
+			text-align: center;
+		}
+
+		span {
+			color: $color-yellow-dark;
+		}
 	}
 }

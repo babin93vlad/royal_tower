@@ -22,7 +22,9 @@
 
 				<div class="header__wrapper-item">
 					<figure class="header__logo">
-						<img src="img/logo.png" alt="Logo" />
+						<a href="index.html">
+							<img src="img/logo.png" alt="Logo" />
+						</a>
 					</figure>
 				</div>
 
@@ -80,24 +82,57 @@
 
 				<div class="header__footer">
 					<div class="header__social">
-						<div class="header__location header__item">
+						<div class="header__item">
 							<a href="https://goo.gl/maps/tkwMdYBPUEwA5apq6" target="_blank">
 								<svg class="header__icon header__icon-location _anim-items">
 									<use xlink:href="img/sprite.svg#icon-location"></use>
 								</svg>
 							</a>
 						</div>
-						<div class="header__mail header__item">
+						<div class="header__item">
 							<a href="mailto:contact@royaltower.com">
 								<svg class="header__icon header__icon-mail _anim-items">
 									<use xlink:href="img/sprite.svg#icon-mail4"></use>
 								</svg>
 							</a>
 						</div>
-						<div class="header__phone header__item">
+						<div class="header__item">
 							<a href="tel:+37322505050">
 								<svg class="header__icon header__icon-phone _anim-items">
 									<use xlink:href="img/sprite.svg#icon-phone"></use>
+								</svg>
+							</a>
+						</div>
+						<div class="header__item">
+							<a href="https://www.facebook.com/RoyalTowerTC/" target="_blank">
+								<svg class="header__icon header__icon-facebook _anim-items">
+									<use
+										xlink:href="img/sprite.svg#icon-facebook-with-circle"
+									></use>
+								</svg>
+							</a>
+						</div>
+						<div class="header__item">
+							<a
+								href="https://www.instagram.com/royaltower_rt/"
+								target="_blank"
+							>
+								<svg class="header__icon header__icon-instagram _anim-items">
+									<use
+										xlink:href="img/sprite.svg#icon-instagram-with-circle"
+									></use>
+								</svg>
+							</a>
+						</div>
+						<div class="header__item">
+							<a
+								href="https://www.linkedin.com/in/royal-tower-3a3862214"
+								target="_blank"
+							>
+								<svg class="header__icon header__icon-linkedin _anim-items">
+									<use
+										xlink:href="img/sprite.svg#icon-linkedin-with-circle"
+									></use>
 								</svg>
 							</a>
 						</div>
@@ -129,12 +164,19 @@
 		<main class="about">
 			<div class="about__wrapper">
 				<div class="about__title _anim-items">
-					<p class="ru-text">О нас</p>
-					<h1 class="ru-text title">Бизнес-Центр</h1>
-					<p class="ro-text">Despre noi</p>
-					<h1 class="ro-text title">Centru De Afaceri</h1>
-					<p class="en-text">About us</p>
-					<h1 class="en-text title">Business Center</h1>
+					<h1 class="ru-text title title__about">
+						Сдача в <br />эксплуатацию <span>2021</span> год
+					</h1>
+
+					<h1 class="ro-text title title__about">
+						Terminare <br />
+						punere în funcțiune <span> 2021 </span> an
+					</h1>
+
+					<h1 class="en-text title title__about">
+						Completion <br />
+						commissioning <span> 2021 </span> year
+					</h1>
 				</div>
 				<div class="about__line _anim-items"></div>
 				<div class="about__descr ru-text _anim-items">
@@ -179,7 +221,7 @@
 					<li class="about__item _anim-items">
 						<figure>
 							<img src="img/branch.png" alt="" />
-							<figcaption>25</figcaption>
+							<figcaption>17</figcaption>
 						</figure>
 						<p class="ru-text">этажей</p>
 						<p class="ro-text">etaje</p>
@@ -188,16 +230,16 @@
 					<li class="about__item _anim-items">
 						<figure>
 							<img src="img/branch.png" alt="" />
-							<figcaption>60</figcaption>
+							<figcaption>2</figcaption>
 						</figure>
-						<p class="ru-text">номеров</p>
+						<p class="ru-text">ресторана</p>
 						<p class="ro-text">camere</p>
 						<p class="en-text">rooms</p>
 					</li>
 					<li class="about__item _anim-items">
 						<figure>
 							<img src="img/branch.png" alt="" />
-							<figcaption>85</figcaption>
+							<figcaption>150</figcaption>
 						</figure>
 						<p class="ru-text">офисов</p>
 						<p class="ro-text">oficii</p>
@@ -206,11 +248,14 @@
 					<li class="about__item _anim-items">
 						<figure>
 							<img src="img/branch.png" alt="" />
-							<figcaption>70</figcaption>
+							<figcaption>2</figcaption>
 						</figure>
-						<p class="ru-text">концерн-залов</p>
-						<p class="ro-text">săli de îngrijorare</p>
-						<p class="en-text">concern halls</p>
+						<p class="ru-text">
+							конференц <br />
+							зала
+						</p>
+						<p class="ro-text">săli de <br />conferințe</p>
+						<p class="en-text">conference <br />halls</p>
 					</li>
 				</ul>
 			</div>
@@ -349,117 +394,62 @@
 
 				<div class="footer__social-wrapper">
 					<div class="footer__social">
-						<div class="footer__location footer__item">
+						<div class="footer__social-item footer__item">
 							<a href="https://goo.gl/maps/tkwMdYBPUEwA5apq6" target="_blank">
 								<svg class="footer__icon footer__icon-location _anim-items">
 									<use xlink:href="img/sprite.svg#icon-location"></use>
 								</svg>
-								<span class="footer__location-span _anim-items"
-									>Str. Mihai Viteazul 4</span
-								>
 							</a>
 						</div>
-						<div class="footer__mail footer__item">
-							<a href="mailto:contact@royaltower.com">
+						<div class="footer__social-item footer__item">
+							<a href="mailto:royaltower.md@gmail.com">
 								<svg class="footer__icon footer__icon-mail _anim-items">
 									<use xlink:href="img/sprite.svg#icon-mail4"></use>
 								</svg>
-								<span class="footer__mail-span _anim-items"
-									>contact@royaltower.com</span
-								>
 							</a>
 						</div>
-						<div class="footer__phone footer__item">
-							<a href="tel:+37322505050">
+						<div class="footer__social-item footer__item">
+							<a href="tel: +37368499997">
 								<svg class="footer__icon footer__icon-phone _anim-items">
 									<use xlink:href="img/sprite.svg#icon-phone"></use>
 								</svg>
-								<span class="footer__phone-span _anim-items"
-									>+373 (22) 50 50 50</span
-								>
+							</a>
+						</div>
+						<div class="footer__social-item footer__item">
+							<a href="https://www.facebook.com/RoyalTowerTC/" target="_blank">
+								<svg class="footer__icon footer__icon-facebook _anim-items">
+									<use
+										xlink:href="img/sprite.svg#icon-facebook-with-circle"
+									></use>
+								</svg>
+							</a>
+						</div>
+						<div class="footer__social-item footer__item">
+							<a
+								href="https://www.instagram.com/royaltower_rt/"
+								target="_blank"
+							>
+								<svg class="footer__icon footer__icon-instagram _anim-items">
+									<use
+										xlink:href="img/sprite.svg#icon-instagram-with-circle"
+									></use>
+								</svg>
+							</a>
+						</div>
+						<div class="footer__social-item footer__item">
+							<a
+								href="https://www.linkedin.com/in/royal-tower-3a3862214"
+								target="_blank"
+							>
+								<svg class="footer__icon footer__icon-linkedin _anim-items">
+									<use
+										xlink:href="img/sprite.svg#icon-linkedin-with-circle"
+									></use>
+								</svg>
 							</a>
 						</div>
 					</div>
-
-					<div class="footer__instagram">
-						<h4 class="_anim-items">
-							instagram
-							<a
-								href="https://instagram.com/royaltower_rt?utm_medium=copy_link"
-								target="_blank"
-								>@royaltower_rt</a
-							>
-						</h4>
-						<div class="footer__inst-wrapper">
-							<figure class="_anim-items">
-								<a
-									href="https://instagram.com/royaltower_rt?utm_medium=copy_link
-									"
-									target="_blank"
-									><img src="img/instagram 1.png" alt="img"
-								/></a>
-							</figure>
-							<figure class="_anim-items">
-								<a
-									href="https://instagram.com/royaltower_rt?utm_medium=copy_link
-									"
-									target="_blank"
-									><img src="img/instagram 2.png" alt="img"
-								/></a>
-							</figure>
-							<figure class="_anim-items">
-								<a
-									href="https://instagram.com/royaltower_rt?utm_medium=copy_link
-									"
-									target="_blank"
-									><img src="img/instagram 3.png" alt="img"
-								/></a>
-							</figure>
-						</div>
-					</div>
 				</div>
-
-				<ul class="footer__nav">
-					<li class="footer__list-item active-footer">
-						<a href="index.html" class="footer__link ru-text">Главная</a>
-						<a href="index.html" class="footer__link ro-text">Principala</a>
-						<a href="index.html" class="footer__link en-text">Home</a>
-					</li>
-
-					<li class="footer__list-item">
-						<a href="about.html" class="footer__link ru-text">О нас</a>
-						<a href="about.html" class="footer__link ro-text">Despre noi</a>
-						<a href="about.html" class="footer__link en-text">About us</a>
-					</li>
-
-					<li class="footer__list-item">
-						<a href="advantages.html" class="footer__link ru-text"
-							>Преимущества</a
-						>
-						<a href="advantages.html" class="footer__link ro-text">Beneficii</a>
-						<a href="advantages.html" class="footer__link en-text"
-							>Advantages</a
-						>
-					</li>
-
-					<li class="footer__list-item">
-						<a href="planner.html" class="footer__link ru-text">Планировки</a>
-						<a href="planner.html" class="footer__link ro-text">Machete</a>
-						<a href="planner.html" class="footer__link en-text">Layouts</a>
-					</li>
-
-					<li class="footer__list-item">
-						<a href="materials.html" class="footer__link ru-text">Материалы</a>
-						<a href="materials.html" class="footer__link ro-text">Materiale</a>
-						<a href="materials.html" class="footer__link en-text">Materials</a>
-					</li>
-
-					<li class="footer__list-item">
-						<a href="contacts.html" class="footer__link ru-text">Контакты</a>
-						<a href="contacts.html" class="footer__link ro-text">Contacte</a>
-						<a href="contacts.html" class="footer__link en-text">Contacts</a>
-					</li>
-				</ul>
 			</div>
 		</footer>
 

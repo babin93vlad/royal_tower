@@ -15,20 +15,20 @@ window.addEventListener("DOMContentLoaded", () => {
 	});
 
 	langSelect.change(function () {
-		if (langSelect.val() === "ru") {
-			localStorage.setItem("language", "RU");
-			$(".ru-text").fadeIn();
+		if (langSelect.val() === "en") {
+			localStorage.setItem("language", "EN");
+			$(".en-text").fadeIn();
 			$(".ro-text").hide();
-			$(".en-text").hide();
+			$(".ru-text").hide();
 		} else if (langSelect.val() === "ro") {
 			localStorage.setItem("language", "RO");
 			$(".ro-text").fadeIn();
 			$(".ru-text").hide();
 			$(".en-text").hide();
-		} else if (langSelect.val() === "en") {
-			localStorage.setItem("language", "EN");
-			$(".en-text").fadeIn();
-			$(".ru-text").hide();
+		} else if (langSelect.val() === "ru") {
+			localStorage.setItem("language", "RU");
+			$(".ru-text").fadeIn();
+			$(".en-text").hide();
 			$(".ro-text").hide();
 		}
 	});
@@ -66,22 +66,22 @@ $(document).ready(function () {
 	});
 
 	if (
-		localStorage.getItem("language") === "RU" ||
+		localStorage.getItem("language") === "EN" ||
 		localStorage.getItem("language") == null
 	) {
-		langSelect.val("ru");
-		$(".ru-text").fadeIn();
+		langSelect.val("en");
+		$(".en-text").fadeIn();
 		$(".ro-text").hide();
-		$(".en-text").hide();
+		$(".ru-text").hide();
 	} else if (localStorage.getItem("language") === "RO") {
 		langSelect.val("ro");
 		$(".ro-text").fadeIn();
 		$(".ru-text").hide();
 		$(".en-text").hide();
-	} else if (localStorage.getItem("language") === "EN") {
-		langSelect.val("en");
-		$(".en-text").fadeIn();
+	} else if (localStorage.getItem("language") === "RU") {
+		langSelect.val("ru");
+		$(".ru-text").fadeIn();
 		$(".ro-text").hide();
-		$(".ru-text").hide();
+		$(".en-text").hide();
 	}
 });

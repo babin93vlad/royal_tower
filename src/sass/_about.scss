@@ -40,8 +40,10 @@
 	&__title {
 		text-transform: uppercase;
 		opacity: 0;
+		width: 40%;
 
 		@media only screen and (max-width: $bp-medium) {
+			width: 60%;
 			margin-bottom: 3rem;
 		}
 
